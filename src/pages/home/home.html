@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+      <button detail-none (click)="expandItem(item)" ion-item *ngFor="let item of items">
+        <ion-thumbnail item-start>
+          <img src="http://placehold.it/100">
+        </ion-thumbnail>
+        <h2>My Neighbor Totoro</h2>
+        <p>Hayao Miyazaki • 1988</p>
+        <expandable [expandHeight]="itemExpandHeight" [expanded]="item.expanded">
+            Hello people
+        </expandable>
+        <button ion-button clear item-end>View</button>
+      </button>
+    </ion-list>
+
+</ion-content>
